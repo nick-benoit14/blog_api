@@ -7,13 +7,13 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
   #   assert_response :success
   # end
 
-  test "should create contact" do
-    name = "Fake Name"
+  test 'should create contact' do
+    name = 'Fake Name'
     params = {
       contact: {
         name: name,
-        email: "fake@example.com",
-        message: "Howdy!"
+        email: 'fake@example.com',
+        message: 'Howdy!'
       }
     }
 
@@ -21,6 +21,6 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     body = response_body
-    assert_equal Contact.where(id: body["id"]).first.name, name
+    assert_equal Contact.where(id: body['id']).first.name, name
   end
 end
