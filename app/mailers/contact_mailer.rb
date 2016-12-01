@@ -3,6 +3,6 @@ class ContactMailer < ApplicationMailer
 
   def send_contact(contact)
     @contact = contact
-    mail(to: @contact.destination, subject: 'Contact Form Submission')
+    mail(to: @contact.destination_email, subject: 'Contact Form Submission')
   end
 end
